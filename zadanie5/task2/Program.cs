@@ -4,26 +4,49 @@ class Program
 {
     static void Main()
     {
-        int[] numbers = new int[50];
+        int[] numbers = new int[100];
         Random random = new Random();
 
         for (int i = 0; i < numbers.Length; i++)
         {
-            numbers[i] = random.Next(-100, 100); 
+            numbers[i] = random.Next(1, 101);
         }
 
-        int lastNumber = numbers[numbers.Length - 1];
+        int maxNumber = FindMaxNumber(numbers);
 
-        int differentCount = 0;
-        for (int i = 0; i < numbers.Length - 1; i++)
+        int[] modifiedNumbers = new int[100];
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if (numbers[i] != lastNumber)
+            modifiedNumbers[i] = numbers[i] == maxNumber ? 1 : 0;
+        }
+
+        Console.WriteLine("Исходный массив:");
+        PrintArray(numbers);
+
+        Console.WriteLine("\nМодифицированный массив:");
+        PrintArray(modifiedNumbers);
+
+        Console.ReadLine();
+    }
+
+    static int FindMaxNumber(int[] array)
+    {
+        int max = array[0];
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i] > max)
             {
-                differentCount++;
+                max = array[i];
             }
         }
+        return max;
+    }
 
-        Console.WriteLine("Количество чисел, отличных от последнего: " + differentCount);
-        Console.ReadLine();
+    static void PrintArray(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i] + " ");
+        }
     }
 }
