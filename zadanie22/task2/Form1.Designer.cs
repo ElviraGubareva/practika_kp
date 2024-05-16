@@ -1,4 +1,4 @@
-﻿namespace task_2
+﻿namespace task_3
 {
     partial class Form1
     {
@@ -28,79 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             button1 = new Button();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(302, 67);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(302, 135);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(302, 218);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(66, 304);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(438, 134);
-            textBox4.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(134, 67);
+            label1.Location = new Point(67, 54);
             label1.Name = "label1";
-            label1.Size = new Size(150, 20);
-            label1.TabIndex = 8;
-            label1.Text = "введите значение X:";
+            label1.Size = new Size(148, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Введите значение X";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(134, 138);
+            label2.Location = new Point(67, 159);
             label2.Name = "label2";
-            label2.Size = new Size(149, 20);
-            label2.TabIndex = 9;
-            label2.Text = "введите значение Y:";
+            label2.Size = new Size(147, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Введите значение Y";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(134, 221);
+            label3.Location = new Point(67, 262);
             label3.Name = "label3";
-            label3.Size = new Size(150, 20);
-            label3.TabIndex = 10;
-            label3.Text = "введите значение Z:";
+            label3.Size = new Size(148, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Введите значение B";
+            label3.Click += label3_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(262, 51);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(221, 27);
+            textBox1.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(262, 152);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(221, 27);
+            textBox2.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(262, 255);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(221, 27);
+            textBox3.TabIndex = 5;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(67, 334);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(416, 163);
+            textBox4.TabIndex = 6;
             // 
             // button1
             // 
-            button1.Location = new Point(526, 409);
+            button1.Location = new Point(507, 429);
             button1.Name = "button1";
-            button1.Size = new Size(128, 29);
-            button1.TabIndex = 11;
-            button1.Text = "Выполнить";
+            button1.Size = new Size(159, 68);
+            button1.TabIndex = 7;
+            button1.Text = "Расчитать";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -108,15 +109,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(671, 450);
+            ClientSize = new Size(682, 520);
             Controls.Add(button1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -126,13 +127,13 @@
 
         #endregion
 
+        private Label label1;
+        private Label label2;
+        private Label label3;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
-        private Label label1;
-        private Label label2;
-        private Label label3;
         private Button button1;
     }
 }
