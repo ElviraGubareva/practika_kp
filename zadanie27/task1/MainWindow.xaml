@@ -21,7 +21,7 @@
         <Button x:Name="buttonExists" Content="Выход" Margin="10,12,10,10" Grid.Row="3" Grid.Column="1" Click="buttonExists_Click"/>
         <Button x:Name="buttonAdd" Content="Добавить" Margin="10,12,10,10" Grid.Row="3" Click="buttonAdd_Click"/>
         <TextBox x:Name="textBoxPath" TextWrapping="Wrap" Margin="10,10,10,13"/>
-        <TextBox x:Name="textBoxContent" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Margin="10,10,14,11" Grid.Row="1" TextWrapping="Wrap" IsReadOnlyCaretVisible="True"/>
+        <TextBox x:Name="textBoxContent" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Margin="10,10,14,11" Grid.Row="1" TextWrapping="Wrap" IsReadOnlyCaretVisible="True" TextChanged="textBoxContent_TextChanged"/>
         <TreeView x:Name="treeViewContent" Grid.Row="1" Margin="10,8,14,10" Visibility="Collapsed"/>
         <ListBox x:Name="listBoxContent" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,14,11" Grid.Row="1" Visibility="Collapsed"/>
         <TextBox x:Name="textBoxResult" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Height="143" Width="551"/>

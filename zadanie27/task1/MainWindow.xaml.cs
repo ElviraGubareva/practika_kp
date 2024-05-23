@@ -5,9 +5,6 @@ using System.Xml;
 
 namespace z1
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
 
@@ -70,7 +67,6 @@ namespace z1
                     XmlElement xRoot = xDoc.DocumentElement;
                     foreach (XmlNode xnode in xRoot)
                     {
-                        // получаем атрибут name
                         if (xnode.Attributes.Count > 0)
                         {
                             XmlNode attr = xnode.Attributes.GetNamedItem("name");
@@ -80,12 +76,10 @@ namespace z1
                                 textBoxResult.Text += attr.Value + " | ";
                                 foreach (XmlNode childnode in xnode.ChildNodes)
                                 {
-                                    // если узел - company
                                     if (childnode.Name == "author")
                                     {
                                         textBoxResult.Text += "Автор: " + childnode.InnerText + " | ";
                                     }
-                                    // если узел age
                                     if (childnode.Name == "publishingYear")
                                     {
                                         textBoxResult.Text += "Год: " + childnode.InnerText + '\n';
@@ -212,25 +206,20 @@ namespace z1
                 XmlElement xRoot = xDoc.DocumentElement;
 
 
-                // обход всех узлов в корневом элементе
                 foreach (XmlNode xnode in xRoot)
                 {
-                    // получаем атрибут name
                     if (xnode.Attributes.Count > 0)
                     {
                         XmlNode attr = xnode.Attributes.GetNamedItem("name");
                         if (attr != null)
                             textBoxContent.Text += attr.Value + " | ";
                     }
-                    // обходим все дочерние узлы элемента user
                     foreach (XmlNode childnode in xnode.ChildNodes)
                     {
-                        // если узел - company
                         if (childnode.Name == "author")
                         {
                             textBoxContent.Text += "Автор: " + childnode.InnerText + " | ";
                         }
-                        // если узел age
                         if (childnode.Name == "publishingYear")
                         {
                             textBoxContent.Text += "Год: " + childnode.InnerText + '\n';
@@ -256,10 +245,8 @@ namespace z1
                 XmlElement xRoot = xDoc.DocumentElement;
 
 
-                // обход всех узлов в корневом элементе
                 foreach (XmlNode xnode in xRoot)
                 {
-                    // получаем атрибут name
                     if (xnode.Attributes.Count > 0)
                     {
                         XmlNode attr = xnode.Attributes.GetNamedItem("name");
@@ -270,15 +257,12 @@ namespace z1
                             localTreeViewContent.Items.Add(item);
                         }
                     }
-                    // обходим все дочерние узлы элемента user
                     foreach (XmlNode childnode in xnode.ChildNodes)
                     {
-                        // если узел - company
                         if (childnode.Name == "author")
                         {
                             item.Items.Add(childnode.InnerText);
                         }
-                        // если узел age
                         if (childnode.Name == "publishingYear")
                         {
                             item.Items.Add(childnode.InnerText);
@@ -301,26 +285,22 @@ namespace z1
                 xDoc.Load(localPath);
                 XmlElement xRoot = xDoc.DocumentElement;
 
-                // обход всех узлов в корневом элементе
                 foreach (XmlNode xnode in xRoot)
                 {
                     string bookInfo = string.Empty;
-                    // получаем атрибут name
+
                     if (xnode.Attributes.Count > 0)
                     {
                         XmlNode attr = xnode.Attributes.GetNamedItem("name");
                         if (attr != null)
                             bookInfo += attr.Value + " | ";
                     }
-                    // обходим все дочерние узлы элемента user
                     foreach (XmlNode childnode in xnode.ChildNodes)
                     {
-                        // если узел - company
                         if (childnode.Name == "author")
                         {
                             bookInfo += "Автор: " + childnode.InnerText + " | ";
                         }
-                        // если узел age
                         if (childnode.Name == "publishingYear")
                         {
                             bookInfo += childnode.InnerText;                            
@@ -335,6 +315,11 @@ namespace z1
                 path = String.Empty;
                 MessageBox.Show("Неверный путь к файлу!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void textBoxContent_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
