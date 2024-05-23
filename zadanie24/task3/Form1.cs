@@ -21,5 +21,10 @@ namespace WinButNum
         {
 
         }
+
+        private void clickButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

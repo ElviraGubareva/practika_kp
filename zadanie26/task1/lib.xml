@@ -1,0 +1,38 @@
+<busCenter>
+  <bus name="Новогрудок">
+    <number>4245 ЕС-4</number>
+    <toPlace>Минск</toPlace>
+  </bus>
+  <bus name="Барановичи">
+    <number>1144 ТТ-1</number>
+    <toPlace>Логойск</toPlace>
+  </bus>
+  <bus name="Островец">
+    <number>1724 МК-5</number>
+    <toPlace>Пинск</toPlace>
+  </bus>
+  <bus name="Краков">
+    <number>4444 НН-3</number>
+    <toPlace>Светлогорск</toPlace>
+  </bus>
+  <bus name="Кричев">
+    <number>2525 КМ-5</number>
+    <toPlace>Полоцк</toPlace>
+  </bus>
+  <bus name="Байки">
+    <number>5533 ЕС-4</number>
+    <toPlace>Ладеники</toPlace>
+  </bus>
+  <bus name="Лида">
+    <number>7842 ОТ-4</number>
+    <toPlace>Гродно</toPlace>
+  </bus>
+  <bus name="Березовка">
+    <number>8129 АМ-4</number>
+    <toPlace>Ошмяны</toPlace>
+  </bus>
+  <bus name="Католыши">
+    <number>9199 АО-7</number>
+    <toPlace>Солигорск</toPlace>
+  </bus>
+</busCenter>

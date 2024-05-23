@@ -39,6 +39,7 @@
             this.clickButton1.TabIndex = 0;
             this.clickButton1.Text = "clicker";
             this.clickButton1.UseVisualStyleBackColor = true;
+            this.clickButton1.Click += new System.EventHandler(this.clickButton1_Click);
             // 
             // Form1
             // 

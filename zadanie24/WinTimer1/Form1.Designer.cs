@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userControlTimer1 = new WinTimer1.UserControlTimer();
-            this.SuspendLayout();
+            userControlTimer1 = new UserControlTimer();
+            SuspendLayout();
             // 
             // userControlTimer1
             // 
-            this.userControlTimer1.Location = new System.Drawing.Point(169, 104);
-            this.userControlTimer1.Name = "userControlTimer1";
-            this.userControlTimer1.Size = new System.Drawing.Size(118, 82);
-            this.userControlTimer1.TabIndex = 0;
-            this.userControlTimer1.TimeEnabled = true;
+            userControlTimer1.Location = new Point(169, 104);
+            userControlTimer1.Name = "userControlTimer1";
+            userControlTimer1.Size = new Size(118, 82);
+            userControlTimer1.TabIndex = 0;
+            userControlTimer1.TimeEnabled = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.userControlTimer1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(userControlTimer1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
         }
 
         #endregion
