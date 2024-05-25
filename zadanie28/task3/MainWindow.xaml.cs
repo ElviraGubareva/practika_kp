@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace z3
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,7 +24,22 @@ namespace z3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Вы нажали на круг");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Вы нажали на пирамиду");
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Вы нажали на треугольник");
         }
     }
 }
